@@ -4,7 +4,7 @@
   border-width: thick;
   border-color: black;
   justify-content: space-between;
-  margin: 3% 10%;
+  margin: 3% 5%;
 }
 .plus-symbol {
   padding:0.5%;
@@ -22,6 +22,6 @@
 }
 .dropdownMenu {
   background-color: white;
-  margin: 0% 10%;
+  margin: 0% 5%;
   border-radius: 1%;
 }
