@@ -15,7 +15,8 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h1 className="App-title">Your Contests</h1>
-          <button type="button" class="btn newContestButton" onClick={() => this.setState({show: true})}>NEW CONTEST</button>
+          <button type="button" class="btn newContestButton" onClick={() => this.setState({show: true})}>
+          <span class="glyphicon glyphicon-plus plus-symbol"></span>NEW CONTEST</button>
         </div>
         <div className="dropdownMenu">
           <Dropdown show={this.state.show}/>

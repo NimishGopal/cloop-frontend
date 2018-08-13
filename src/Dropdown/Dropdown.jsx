@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Dropdown.css';
 import TableElement from './../Table/Table.jsx';
 import NewContest from './../NewContest/NewContest.jsx';
+import { myConfig } from './../config.js';
 
 
 class DropdownElement extends Component {
@@ -13,12 +14,12 @@ class DropdownElement extends Component {
     };
   }
   componentDidMount() {
-    fetch('https://shielded-oasis-19604.herokuapp.com/'+this.state.selectedTable)
+    fetch(myConfig.url+this.state.selectedTable)
     .then(res => res.json())
     .then((data) => this.setState({table: data}))
   }
   componentDidUpdate() {
-    fetch('https://shielded-oasis-19604.herokuapp.com/'+this.state.selectedTable)
+    fetch(myConfig.url+this.state.selectedTable)
     .then(res => res.json())
     .then((data) => this.setState({table: data}))
   }

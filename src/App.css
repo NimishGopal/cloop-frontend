@@ -6,17 +6,15 @@
   justify-content: space-between;
   margin: 3% 10%;
 }
-
+.plus-symbol {
+  padding:0.5%;
+}
 .App-title {
   font-size: 2em;
   color: black;
   margin: 0px;
 }
 .newContestButton, .newContestButton:hover, .newContestButton:enabled {
-  display: -webkit-flex; /* Safari */
-  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
-  display: flex;
-  flex-wrap: wrap;
   font-size: 1.2em;
   padding: 1%;
   background-color: #4e3a9e;

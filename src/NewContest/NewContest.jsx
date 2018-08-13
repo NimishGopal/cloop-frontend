@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './NewContest.css';
+import { myConfig } from './../config.js';
 
 class NewContest extends Component{
   constructor() {
@@ -19,7 +20,7 @@ class NewContest extends Component{
     this.setState({ [e.target.name]: e.target.value });
   }
   sendData = () => {
-    fetch('https://shielded-oasis-19604.herokuapp.com/testyytyyt', {
+    fetch(myConfig.url+this.props.selectedTable, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, cors, *same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -35,10 +36,9 @@ class NewContest extends Component{
     })
   }
   render(){
-    console.log('https://shielded-oasis-19604.herokuapp.com/'+this.props.selectedTable);
     const { contestname, startdate, enddate, link, createdby, noofposts, lastactivity } = this.state;
     return(
-      <div className="container floatingBox">
+      <div className="floatingBox">
         <form>
           <div className="form-group">
             <label for="email">Contest Name:</label>
