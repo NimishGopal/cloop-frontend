@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Dropdown.css';
+// import './Dropdown.css';
 import TableElement from './../Table/Table.jsx';
 import NewContest from './../NewContest/NewContest.jsx';
 
