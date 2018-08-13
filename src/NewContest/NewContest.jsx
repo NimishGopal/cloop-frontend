@@ -13,25 +13,35 @@ class NewContest extends Component{
           createdby: '',
           noofposts:'',
           lastactivity: ''
-        };
+        }
   }
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   }
   sendData = () => {
     const data = JSON.stringify(this.state);
-    fetch('https://shielded-oasis-19604.herokuapp.com/'+this.props.selectedTable, {
+    alert(data);
+    fetch('https://shielded-oasis-19604.herokuapp.com/testyytyyt', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: data,
-    });
+      body: data
+    })
+    // alert(JSON.stringify(this.state));
+    // fetch('https://shielded-oasis-19604.herokuapp.com/'+this.props.selectedTable, {
+    //   method: 'POST',
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(this.state)
+    // })
   }
   render(){
     console.log('https://shielded-oasis-19604.herokuapp.com/'+this.props.selectedTable);
-    const { contestname, startdate, enddate, link, status, createdby, noofposts, lastactivity } = this.state;
+    const { contestname, startdate, enddate, link, createdby, noofposts, lastactivity } = this.state;
     return(
       <div className="container floatingBox">
         <form>
@@ -53,8 +63,8 @@ class NewContest extends Component{
           </div>
           <div className="form-group">
             <label>Status:</label> <br />
-            <input type="radio" name="status" name="status" value={'OPEN'} onChange={this.onChange} /> OPEN <br />
-            <input type="radio" name="status" name="status" value={'CLOSE'} onChange={this.onChange} /> CLOSE
+            <input type="radio" name="status" value={'OPEN'} onChange={this.onChange} /> OPEN <br />
+            <input type="radio" name="status" value={'CLOSE'} onChange={this.onChange} /> CLOSE
           </div>
           <div className="form-group">
             <label for="createdby">Created By:</label>
