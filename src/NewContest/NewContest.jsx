@@ -19,15 +19,19 @@ class NewContest extends Component{
     this.setState({ [e.target.name]: e.target.value });
   }
   sendData = () => {
-    const data = JSON.stringify(this.state);
-    alert(data);
     fetch('https://shielded-oasis-19604.herokuapp.com/testyytyyt', {
-      method: 'POST',
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, cors, *same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: "same-origin", // include, same-origin, *omit
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          "Content-Type": "application/json; charset=utf-8",
+          //"Content-Type": "application/x-www-form-urlencoded",
       },
-      body: data
+      redirect: "follow", // manual, *follow, error
+      referrer: "no-referrer", // no-referrer, *client
+      body: JSON.stringify(this.state)
     })
     // alert(JSON.stringify(this.state));
     // fetch('https://shielded-oasis-19604.herokuapp.com/'+this.props.selectedTable, {
