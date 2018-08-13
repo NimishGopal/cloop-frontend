@@ -33,15 +33,6 @@ class NewContest extends Component{
       referrer: "no-referrer", // no-referrer, *client
       body: JSON.stringify(this.state)
     })
-    // alert(JSON.stringify(this.state));
-    // fetch('https://shielded-oasis-19604.herokuapp.com/'+this.props.selectedTable, {
-    //   method: 'POST',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(this.state)
-    // })
   }
   render(){
     console.log('https://shielded-oasis-19604.herokuapp.com/'+this.props.selectedTable);

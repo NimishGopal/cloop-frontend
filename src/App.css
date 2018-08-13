@@ -4,6 +4,7 @@
   border-width: thick;
   border-color: black;
   justify-content: space-between;
+  margin: 3% 10%;
 }
 
 .App-title {
@@ -17,10 +18,12 @@
   display: flex;
   flex-wrap: wrap;
   font-size: 1.2em;
-  padding: 0.7%;
+  padding: 1%;
   background-color: #4e3a9e;
   color: white;
 }
 .dropdownMenu {
   background-color: white;
+  margin: 0% 10%;
+  border-radius: 1%;
 }
