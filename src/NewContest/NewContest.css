@@ -1,0 +1,20 @@
+.floatingBox{
+  position:absolute;
+  background-color: white;
+  border-radius: 1%;
+  padding: 3%;
+  z-index: 1;
+  margin: 5%;
+}
+.submitButton, .submitButton:hover, .submitButton:active, .submitButton:enabled {
+  background-color: #4d3a9e;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  margin: 0.50%;
+}
