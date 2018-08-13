@@ -19,14 +19,14 @@ class TableElement extends Component {
       <table className="table">
         <thead>
           <tr>
-            <th>Contest Name</th>
-            <th>Start Date</th>
-            <th>End Date</th>
-            <th>Contest Url</th>
-            <th>Status</th>
-            <th>Created by</th>
-            <th>Number of posts</th>
-            <th>Last Activity</th>
+            <th class="tableHead">Contest Name</th>
+            <th class="tableHead">Start Date</th>
+            <th class="tableHead">End Date</th>
+            <th class="tableHead">Contest Url</th>
+            <th class="tableHead">Status</th>
+            <th class="tableHead">Created by</th>
+            <th class="tableHead">Number of posts</th>
+            <th class="tableHead">Last Activity</th>
           </tr>
         </thead>
         <tbody>

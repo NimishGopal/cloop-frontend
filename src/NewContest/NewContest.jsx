@@ -20,7 +20,7 @@ class NewContest extends Component{
   }
   sendData = () => {
     const data = JSON.stringify(this.state);
-    fetch('http://127.0.0.1:4000/'+this.props.selectedTable, {
+    fetch('https://shielded-oasis-19604.herokuapp.com/'+this.props.selectedTable, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -30,7 +30,7 @@ class NewContest extends Component{
     });
   }
   render(){
-    console.log('http://127.0.0.1:4000/'+this.props.selectedTable);
+    console.log('https://shielded-oasis-19604.herokuapp.com/'+this.props.selectedTable);
     const { contestname, startdate, enddate, link, status, createdby, noofposts, lastactivity } = this.state;
     return(
       <div className="container floatingBox">

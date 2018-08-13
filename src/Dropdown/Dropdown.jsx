@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Dropdown.css';
+import './Dropdown.css';
 import TableElement from './../Table/Table.jsx';
 import NewContest from './../NewContest/NewContest.jsx';
 
@@ -10,11 +10,15 @@ class DropdownElement extends Component {
     this.state = {
       selectedTable: "testyytyyt",
       table: [],
-      show: false
     };
   }
+  componentDidMount() {
+    fetch('https://shielded-oasis-19604.herokuapp.com/'+this.state.selectedTable)
+    .then(res => res.json())
+    .then((data) => this.setState({table: data}))
+  }
   componentDidUpdate() {
-    fetch('http://127.0.0.1:4000/'+this.state.selectedTable)
+    fetch('https://shielded-oasis-19604.herokuapp.com/'+this.state.selectedTable)
     .then(res => res.json())
     .then((data) => this.setState({table: data}))
   }
