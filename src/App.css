@@ -4,7 +4,7 @@
   border-width: thick;
   border-color: black;
   justify-content: space-between;
-  margin: 3% 5%;
+  margin: 3% 10%;
 }
 .plus-symbol {
   padding:0.5%;
@@ -16,12 +16,17 @@
 }
 .newContestButton, .newContestButton:hover, .newContestButton:enabled {
   font-size: 1.2em;
-  padding: 1%;
+  padding: 5%;
   background-color: #4e3a9e;
   color: white;
+  float: right;
+  margin: 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 .dropdownMenu {
   background-color: white;
-  margin: 0% 5%;
+  margin: 0% 10%;
   border-radius: 1%;
 }

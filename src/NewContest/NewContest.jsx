@@ -42,39 +42,38 @@ class NewContest extends Component{
         <form>
           <div className="form-group">
             <label for="email">Contest Name:</label>
-            <input type="text" className="form-control" name="contestname" value={contestname} onChange={this.onChange}  />
+            <input type="text" className="form-control" name="contestname" value={contestname} onChange={this.onChange} required />
           </div>
           <div className="form-group">
             <label for="date">Start Date:</label>
-            <input type="date" className="form-control" name="startdate" value={startdate} onChange={this.onChange}  />
+            <input type="date" className="form-control" name="startdate" value={startdate} onChange={this.onChange} required />
           </div>
           <div className="form-group">
             <label for="date">End Date:</label>
-            <input type="date" className="form-control" name="enddate" value={enddate} onChange={this.onChange}  />
+            <input type="date" className="form-control" name="enddate" value={enddate} onChange={this.onChange} required />
           </div>
           <div className="form-group">
             <label for="link">Link:</label>
-            <input type="url" className="form-control" name="link" value={link} onChange={this.onChange}  />
+            <input type="url" className="form-control" name="link" value={link} onChange={this.onChange} required />
           </div>
           <div className="form-group">
             <label>Status:</label> <br />
-            <input type="radio" name="status" value={'OPEN'} onChange={this.onChange} /> OPEN <br />
-            <input type="radio" name="status" value={'CLOSE'} onChange={this.onChange} /> CLOSE
+            <input type="radio" name="status" value={'OPEN'} onChange={this.onChange} required/> OPEN <br />
+            <input type="radio" name="status" value={'CLOSE'} onChange={this.onChange} required/> CLOSE
           </div>
           <div className="form-group">
             <label for="createdby">Created By:</label>
-            <input type="text" className="form-control" name="createdby" value={createdby} onChange={this.onChange}  />
+            <input type="text" className="form-control" name="createdby" value={createdby} onChange={this.onChange} required />
           </div>
           <div className="form-group">
             <label for="lastactivity">No. of Posts:</label>
-            <input type="text" className="form-control" name="noofposts" value={noofposts} onChange={this.onChange}  />
+            <input type="text" className="form-control" name="noofposts" value={noofposts} onChange={this.onChange} required />
           </div>
           <div className="form-group">
             <label for="lastactivity">Last Activity:</label>
-            <input type="text" className="form-control" name="lastactivity" value={lastactivity} onChange={this.onChange}  />
+            <input type="text" className="form-control" name="lastactivity" value={lastactivity} onChange={this.onChange} required  />
           </div>
           <button type="submit" className="btn submitButton" onClick={this.sendData}>Submit</button>
-          <button type="submit" className="btn submitButton">Cancel</button>
         </form>
       </div>
     );
